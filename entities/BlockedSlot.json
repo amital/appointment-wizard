@@ -1,0 +1,35 @@
+{
+  "type": "object",
+  "properties": {
+    "business_email": {
+      "type": "string",
+      "description": "Email of the business (foreign key to BusinessConfig)"
+    },
+    "start_datetime": {
+      "type": "string",
+      "description": "Block start datetime ISO 8601"
+    },
+    "end_datetime": {
+      "type": "string",
+      "description": "Block end datetime ISO 8601"
+    },
+    "reason": {
+      "type": "string",
+      "description": "Reason for blocking (vacation, out of office, etc.)"
+    },
+    "is_recurring": {
+      "type": "boolean",
+      "description": "Whether this block recurs"
+    },
+    "recurrence_rule": {
+      "type": "string",
+      "description": "RRULE string for recurring blocks"
+    },
+    "google_event_id": {
+      "type": "string",
+      "description": "Google Calendar event ID if synced"
+    }
+  },
+  "required": [],
+  "name": "BlockedSlot"
+}

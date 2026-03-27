@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "description": "Holiday date YYYY-MM-DD"
+    },
+    "name_he": {
+      "type": "string",
+      "description": "Holiday name in Hebrew"
+    },
+    "name_en": {
+      "type": "string",
+      "description": "Holiday name in English"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "israeli",
+        "international",
+        "custom"
+      ],
+      "description": "Type of holiday"
+    },
+    "default_closed": {
+      "type": "boolean",
+      "description": "Whether businesses are closed by default on this day"
+    },
+    "country": {
+      "type": "string",
+      "description": "Country code (IL, US, etc.) or 'global'"
+    }
+  },
+  "required": [],
+  "name": "Holiday"
+}

@@ -1,0 +1,77 @@
+{
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": "string",
+      "description": "Business owner email"
+    },
+    "business_name": {
+      "type": "string",
+      "description": "Name of the business"
+    },
+    "business_type": {
+      "type": "string",
+      "enum": [
+        "clinic",
+        "lawyer",
+        "plumber",
+        "dentist",
+        "restaurant",
+        "other"
+      ],
+      "description": "Type of business"
+    },
+    "working_days": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "description": "Working days: 0=Sun, 1=Mon, ..., 6=Sat"
+    },
+    "working_hours_start": {
+      "type": "string",
+      "description": "Daily start time HH:MM"
+    },
+    "working_hours_end": {
+      "type": "string",
+      "description": "Daily end time HH:MM"
+    },
+    "appointment_duration_minutes": {
+      "type": "number",
+      "description": "Default appointment duration in minutes"
+    },
+    "buffer_minutes": {
+      "type": "number",
+      "description": "Buffer time between appointments in minutes"
+    },
+    "works_on_holidays": {
+      "type": "boolean",
+      "description": "Whether the business works on public holidays"
+    },
+    "calendar_id": {
+      "type": "string",
+      "description": "Google Calendar ID to use"
+    },
+    "google_refresh_token": {
+      "type": "string",
+      "description": "Google OAuth refresh token for this business"
+    },
+    "timezone": {
+      "type": "string",
+      "description": "Timezone string e.g. Asia/Jerusalem"
+    },
+    "ai_instructions": {
+      "type": "string",
+      "description": "Custom AI instructions for this business"
+    },
+    "command_history": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      },
+      "description": "History of AI commands used to configure this business"
+    }
+  },
+  "required": [],
+  "name": "BusinessConfig"
+}

@@ -1,0 +1,61 @@
+{
+  "type": "object",
+  "properties": {
+    "business_email": {
+      "type": "string",
+      "description": "Email of the business"
+    },
+    "client_name": {
+      "type": "string",
+      "description": "Name of the client"
+    },
+    "client_email": {
+      "type": "string",
+      "description": "Email of the client"
+    },
+    "client_phone": {
+      "type": "string",
+      "description": "Phone of the client"
+    },
+    "start_datetime": {
+      "type": "string",
+      "description": "Appointment start datetime ISO 8601"
+    },
+    "end_datetime": {
+      "type": "string",
+      "description": "Appointment end datetime ISO 8601"
+    },
+    "title": {
+      "type": "string",
+      "description": "Appointment title / service type"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "confirmed",
+        "cancelled",
+        "completed"
+      ],
+      "description": "Appointment status"
+    },
+    "google_event_id": {
+      "type": "string",
+      "description": "Google Calendar event ID"
+    },
+    "booked_via": {
+      "type": "string",
+      "description": "Which app or channel booked this appointment"
+    },
+    "reminder_sent": {
+      "type": "boolean",
+      "description": "Whether a reminder was sent"
+    }
+  },
+  "required": [],
+  "name": "Appointment"
+}
